@@ -29,59 +29,141 @@ El proyecto **Task Manager** incluye las siguientes funcionalidades:
 
 ## 🖥️ Cómo Ejecutar el Proyecto
 
-Sigue estos pasos para ejecutar el proyecto en tu máquina local:
+# 🚀 Pasos para Clonar y Ejecutar el Proyecto Task Manager en Local
 
-### 1. Clona el Repositorio
+A continuación, se detallan los pasos para clonar el repositorio y hacer funcionar el proyecto **Task Manager** en tu máquina local. Se incluyen comandos para **Linux** y **Windows**, usando tanto **pip** como **uv**.
 
-```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
-```
+---
 
-### 2. Crea y Activa el Entorno Virtual
+## 📥 Paso 1: Clonar el Repositorio
 
-#### En Linux/macOS:
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
+1. **Abre una terminal (Linux) o PowerShell/CMD (Windows)**.
 
-#### En Windows:
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-```
+2. **Clona el repositorio**:
+   ```bash
+   git clone https://github.com/jdomdev/ai-django-pill.git
+   ```
 
-### 3. Instala las Dependencias
+3. **Entra en la carpeta del proyecto**:
+   ```bash
+   cd ai-django-pill
+   ```
 
-```bash
-pip install django
-```
+---
 
-### 4. Aplica las Migraciones
+## 🐍 Paso 2: Crear y Activar el Entorno Virtual
 
-```bash
-python manage.py migrate
-```
+### Opción 1: Usando `uv` (Linux y Windows)
+1. **Instalar `uv` (si no lo tienes)**:
+   ```bash
+   pip install uv
+   ```
 
-### 5. Crea un Superusuario (Opcional)
+2. **Crear el entorno virtual**:
+   ```bash
+   uv venv --python python3.13 .venv
+   ```
 
-Si deseas acceder al panel de administración, crea un superusuario:
+3. **Activar el entorno virtual**:
+   - **En Linux**:
+     ```bash
+     source .venv/bin/activate
+     ```
+   - **En Windows**:
+     ```bash
+     .venv\Scripts\activate
+     ```
 
-```bash
-python manage.py createsuperuser
-```
+4. **Inicializar el proyecto sin dependencias**:
+   ```bash
+   uv init --bare
+   ```
 
-### 6. Ejecuta el Servidor
+### Opción 2: Usando `venv` (Linux y Windows)
+1. **Crear el entorno virtual**:
+   - **En Linux**:
+     ```bash
+     python3 -m venv .venv
+     ```
+   - **En Windows**:
+     ```bash
+     python -m venv .venv
+     ```
 
-```bash
-python manage.py runserver
-```
+2. **Activar el entorno virtual**:
+   - **En Linux**:
+     ```bash
+     source .venv/bin/activate
+     ```
+   - **En Windows**:
+     ```bash
+     .venv\Scripts\activate
+     ```
 
-### 7. Accede a la Aplicación
+---
 
-- **Lista de tareas**: Visita [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
-- **Panel de administración**: Visita [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/).
+## 📦 Paso 3: Instalar Dependencias
+
+### Opción 1: Usando `uv`
+1. **Instalar Django**:
+   ```bash
+   uv add django
+   ```
+
+### Opción 2: Usando `pip`
+1. **Instalar Django**:
+   ```bash
+   pip install django
+   ```
+
+---
+
+## 🛠️ Paso 4: Aplicar Migraciones
+
+1. **Aplicar las migraciones**:
+   ```bash
+   python manage.py migrate
+   ```
+
+---
+
+## 👤 Paso 5: Crear un Superusuario (Opcional)
+
+1. **Crear un superusuario**:
+   ```bash
+   python manage.py createsuperuser
+   ```
+
+2. **Sigue las instrucciones para ingresar un nombre de usuario, correo electrónico y contraseña**.
+
+---
+
+## 🚀 Paso 6: Ejecutar el Servidor
+
+1. **Iniciar el servidor**:
+   ```bash
+   python manage.py runserver
+   ```
+
+2. **Acceder a la aplicación**:
+   - Abre tu navegador y visita [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+
+---
+
+## 🎉 ¡Proyecto en Funcionamiento!
+
+Ahora tienes el **Task Manager** funcionando en tu máquina local. Puedes añadir tareas, marcarlas como completadas y ver la lista de tareas en la página principal.
+
+---
+
+### Notas Adicionales:
+- **Panel de administración**: Si creaste un superusuario, puedes acceder al panel de administración en [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/).
+- **Dependencias adicionales**: Si el proyecto tiene más dependencias, instálalas usando `uv add <paquete>` o `pip install <paquete>`.
+
+---
+
+¡Listo! Sigue estos pasos y tendrás el proyecto funcionando en tu entorno local. 😊
+
 
 ---
 
