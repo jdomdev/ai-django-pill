@@ -1,5 +1,3 @@
-
-```markdown
 # 🚀 Píldora Django y Proyecto Task Manager
 
 ¡Bienvenido al repositorio del proyecto **Task Manager**! Este proyecto es una aplicación web desarrollada con Django que permite gestionar tareas,
